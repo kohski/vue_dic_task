@@ -17,9 +17,6 @@ const app = new Vue({
         term: this.term
       }
       this.items.push(item)
-      this.name = ''
-      this.course = ''
-      this.term = ''
     }
   }
 })
