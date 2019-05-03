@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <form v-on:submit.prevent> 
+      <label for="name">名前 : </label>
+      <input type="text" v-model="name">
+      <label for="name">コース : </label>
+      <input type="text" v-model="course">
+      <label for="name">受講期 : </label>
+      <input type="text" v-model="term"><br>
+      <input type="submit" v-on:click="addItem()" value="入力した生徒を追加する">
+    </form>
+    <ul>
+      <li v-for="item in items">
+        ID {{ item.id }} /
+        名前 {{ item.name }} /
+        コース {{ item.course }} /
+        受講期 {{ item.term }}
+      </li>
+    </ul>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
